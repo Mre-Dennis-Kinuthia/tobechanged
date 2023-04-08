@@ -1,0 +1,9 @@
+#!/bin/bash
+
+git diff README.md
+git diff pyfile.py
+
+commit_string=$(git log --pretty=format:'%H' -n 1)
+
+echo "Commit: $commit_string"
+

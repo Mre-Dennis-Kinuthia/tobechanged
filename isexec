@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Set the directory to search in
+directory="/home/nansi/test_ground/tobechanged"
+
+# Loop through all files in the directory
+for file in $directory/*; do
+  # Check if the file is executable
+  if [[ -x $file ]]; then
+    echo "$file is exec"
+
+    git diff $file
+  fi
+done
